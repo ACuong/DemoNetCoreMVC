@@ -8,25 +8,25 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Study-PRV\\.nuget\\packages\\": {},
+    "C:\\Users\\lyngu\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Học Tập\\Mã nguồn mở CN TKT\\NetCore\\DemoDotNetMVC\\DemoDotNetMVC.csproj",
+      "projectUniqueName": "D:\\Hoc Tap\\Ma Nguon Mo CN TKT\\NetCore\\DemoDotNetMVC\\DemoDotNetMVC.csproj",
       "projectName": "DemoDotNetMVC",
-      "projectPath": "D:\\Học Tập\\Mã nguồn mở CN TKT\\NetCore\\DemoDotNetMVC\\DemoDotNetMVC.csproj",
-      "packagesPath": "C:\\Users\\Study-PRV\\.nuget\\packages\\",
-      "outputPath": "D:\\Học Tập\\Mã nguồn mở CN TKT\\NetCore\\DemoDotNetMVC\\obj\\",
+      "projectPath": "D:\\Hoc Tap\\Ma Nguon Mo CN TKT\\NetCore\\DemoDotNetMVC\\DemoDotNetMVC.csproj",
+      "packagesPath": "C:\\Users\\lyngu\\.nuget\\packages\\",
+      "outputPath": "D:\\Hoc Tap\\Ma Nguon Mo CN TKT\\NetCore\\DemoDotNetMVC\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Study-PRV\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\lyngu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
