@@ -1,10 +1,9 @@
 using System;
 using System.ComponentModel.DataAnnotations;
-
+using System.ComponentModel.DataAnnotations.Schema;
 namespace DemoDotNetMVC.Models
 {
-    [Table "Employee"]
-    public class Employee
+     public class Employee
     {
         [Key]
         public int EmployeeID { get; set; }
