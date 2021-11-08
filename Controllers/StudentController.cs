@@ -25,7 +25,7 @@ namespace DemoDotNetMVC.Controllers
         }
 
         // GET: Student/Details/5
-        public async Task<IActionResult> Details(string id)
+        public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
             {
@@ -53,7 +53,7 @@ namespace DemoDotNetMVC.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("StudentID,StudentName")] Student student)
+        public async Task<IActionResult> Create([Bind("StudentID,StudentName,Adress")] Student student)
         {
             if (ModelState.IsValid)
             {
@@ -65,7 +65,7 @@ namespace DemoDotNetMVC.Controllers
         }
 
         // GET: Student/Edit/5
-        public async Task<IActionResult> Edit(string id)
+        public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
             {
@@ -85,7 +85,7 @@ namespace DemoDotNetMVC.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("StudentID,StudentName")] Student student)
+        public async Task<IActionResult> Edit(int id, [Bind("StudentID,StudentName,Adress")] Student student)
         {
             if (id != student.StudentID)
             {
@@ -116,7 +116,7 @@ namespace DemoDotNetMVC.Controllers
         }
 
         // GET: Student/Delete/5
-        public async Task<IActionResult> Delete(string id)
+        public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
             {
@@ -136,7 +136,7 @@ namespace DemoDotNetMVC.Controllers
         // POST: Student/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(string id)
+        public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var student = await _context.Student.FindAsync(id);
             _context.Student.Remove(student);
@@ -144,7 +144,7 @@ namespace DemoDotNetMVC.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        private bool StudentExists(string id)
+        private bool StudentExists(int id)
         {
             return _context.Student.Any(e => e.StudentID == id);
         }

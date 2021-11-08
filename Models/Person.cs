@@ -9,6 +9,8 @@ namespace DemoDotNetMVC.Models
     {
         [Key]
         public int PersonId { get; set; }
+
+        [Display(Name ="Tên")]
         public string PersonName { get; set; }
     }
 }

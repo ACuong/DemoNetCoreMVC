@@ -30,6 +30,57 @@ namespace DemoDotNetMVC.Migrations
 
                     b.ToTable("Employee");
                 });
+
+            modelBuilder.Entity("DemoDotNetMVC.Models.Person", b =>
+                {
+                    b.Property<int>("PersonId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("PersonName")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("PersonId");
+
+                    b.ToTable("Person");
+                });
+
+            modelBuilder.Entity("DemoDotNetMVC.Models.Product", b =>
+                {
+                    b.Property<int>("ProductID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("ProductName")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("UnitPrice")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("ProductID");
+
+                    b.ToTable("Product");
+                });
+
+            modelBuilder.Entity("DemoDotNetMVC.Models.Student", b =>
+                {
+                    b.Property<int>("StudentID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Adress")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("StudentName")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("StudentID");
+
+                    b.ToTable("Student");
+                });
 #pragma warning restore 612, 618
         }
     }

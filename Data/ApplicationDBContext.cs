@@ -14,5 +14,10 @@ using DemoDotNetMVC.Models;
 
         public DbSet<DemoDotNetMVC.Models.Employee> Employee { get; set; }
 
+
+        public DbSet<DemoDotNetMVC.Models.Product> Product { get; set; }
+
+        public DbSet<DemoDotNetMVC.Models.Person> Person { get; set; }
+
         public DbSet<DemoDotNetMVC.Models.Student> Student { get; set; }
     }
