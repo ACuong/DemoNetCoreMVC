@@ -20,4 +20,5 @@ using DemoDotNetMVC.Models;
         public DbSet<DemoDotNetMVC.Models.Person> Person { get; set; }
 
         public DbSet<DemoDotNetMVC.Models.Student> Student { get; set; }
+
     }
