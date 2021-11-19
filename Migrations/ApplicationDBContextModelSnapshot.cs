@@ -14,6 +14,20 @@ namespace DemoDotNetMVC.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "5.0.12");
 
+            modelBuilder.Entity("DemoDotNetMVC.Models.Category", b =>
+                {
+                    b.Property<int>("CategoryID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("CategoryName")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("CategoryID");
+
+                    b.ToTable("Category");
+                });
+
             modelBuilder.Entity("DemoDotNetMVC.Models.Employee", b =>
                 {
                     b.Property<int>("EmployeeID")
@@ -37,18 +51,27 @@ namespace DemoDotNetMVC.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("PersonName")
                         .HasColumnType("TEXT");
 
                     b.HasKey("PersonId");
 
                     b.ToTable("Person");
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("Person");
                 });
 
             modelBuilder.Entity("DemoDotNetMVC.Models.Product", b =>
                 {
                     b.Property<int>("ProductID")
                         .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("CategoryID")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("ProductName")
@@ -61,6 +84,8 @@ namespace DemoDotNetMVC.Migrations
                         .HasColumnType("INTEGER");
 
                     b.HasKey("ProductID");
+
+                    b.HasIndex("CategoryID");
 
                     b.ToTable("Product");
                 });
@@ -80,6 +105,35 @@ namespace DemoDotNetMVC.Migrations
                     b.HasKey("StudentID");
 
                     b.ToTable("Student");
+                });
+
+            modelBuilder.Entity("DemoDotNetMVC.Models.Teacher", b =>
+                {
+                    b.HasBaseType("DemoDotNetMVC.Models.Person");
+
+                    b.Property<string>("DiaChi")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("TeacherId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasDiscriminator().HasValue("Teacher");
+                });
+
+            modelBuilder.Entity("DemoDotNetMVC.Models.Product", b =>
+                {
+                    b.HasOne("DemoDotNetMVC.Models.Category", "Category")
+                        .WithMany("Products")
+                        .HasForeignKey("CategoryID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Category");
+                });
+
+            modelBuilder.Entity("DemoDotNetMVC.Models.Category", b =>
+                {
+                    b.Navigation("Products");
                 });
 #pragma warning restore 612, 618
         }

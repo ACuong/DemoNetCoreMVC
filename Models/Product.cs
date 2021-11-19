@@ -17,5 +17,10 @@ namespace DemoDotNetMVC.Models
 
         [Display(Name ="Số lượng")]
         public int Quantity { get; set; }
+
+        public int CategoryID { get; set; }
+
+        public Category Category {get; set;}
+
     }
 }

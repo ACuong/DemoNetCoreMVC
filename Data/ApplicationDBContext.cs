@@ -21,4 +21,9 @@ using DemoDotNetMVC.Models;
 
         public DbSet<DemoDotNetMVC.Models.Student> Student { get; set; }
 
+        public DbSet<DemoDotNetMVC.Models.Teacher> Teacher { get; set; }
+
+        public DbSet<DemoDotNetMVC.Models.Category> Category { get; set; }
+
+
     }
