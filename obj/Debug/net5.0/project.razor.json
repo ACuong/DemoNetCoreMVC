@@ -15619,8 +15619,18 @@
   "RootNamespace": "DemoDotNetMVC",
   "Documents": [
     {
+      "FilePath": "d:\\HocTap\\MaNguonMoCNTKT\\NetCore\\DemoDotNetMVC\\Views\\ChuyenNganh\\Index.cshtml",
+      "TargetPath": "Views\\ChuyenNganh\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\HocTap\\MaNguonMoCNTKT\\NetCore\\DemoDotNetMVC\\Views\\Employee\\Index.cshtml",
       "TargetPath": "Views\\Employee\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\HocTap\\MaNguonMoCNTKT\\NetCore\\DemoDotNetMVC\\Views\\Khoa\\Index.cshtml",
+      "TargetPath": "Views\\Khoa\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15634,13 +15644,43 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\HocTap\\MaNguonMoCNTKT\\NetCore\\DemoDotNetMVC\\Views\\Cat\\Index.cshtml",
+      "TargetPath": "Views\\Cat\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\HocTap\\MaNguonMoCNTKT\\NetCore\\DemoDotNetMVC\\Views\\ChuyenNganh\\Details.cshtml",
+      "TargetPath": "Views\\ChuyenNganh\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\HocTap\\MaNguonMoCNTKT\\NetCore\\DemoDotNetMVC\\Views\\HelloWorld\\Demo.cshtml",
       "TargetPath": "Views\\HelloWorld\\Demo.cshtml",
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\HocTap\\MaNguonMoCNTKT\\NetCore\\DemoDotNetMVC\\Views\\Khoa\\Edit.cshtml",
+      "TargetPath": "Views\\Khoa\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\HocTap\\MaNguonMoCNTKT\\NetCore\\DemoDotNetMVC\\Views\\Cat\\Delete.cshtml",
+      "TargetPath": "Views\\Cat\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\HocTap\\MaNguonMoCNTKT\\NetCore\\DemoDotNetMVC\\Views\\Product\\Edit.cshtml",
       "TargetPath": "Views\\Product\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\HocTap\\MaNguonMoCNTKT\\NetCore\\DemoDotNetMVC\\Views\\Animal\\Edit.cshtml",
+      "TargetPath": "Views\\Animal\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\HocTap\\MaNguonMoCNTKT\\NetCore\\DemoDotNetMVC\\Views\\ChuyenNganh\\Create.cshtml",
+      "TargetPath": "Views\\ChuyenNganh\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15664,8 +15704,28 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\HocTap\\MaNguonMoCNTKT\\NetCore\\DemoDotNetMVC\\Views\\Animal\\Details.cshtml",
+      "TargetPath": "Views\\Animal\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\HocTap\\MaNguonMoCNTKT\\NetCore\\DemoDotNetMVC\\Views\\Khoa\\Create.cshtml",
+      "TargetPath": "Views\\Khoa\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\HocTap\\MaNguonMoCNTKT\\NetCore\\DemoDotNetMVC\\Views\\Student\\Index.cshtml",
       "TargetPath": "Views\\Student\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\HocTap\\MaNguonMoCNTKT\\NetCore\\DemoDotNetMVC\\Views\\Animal\\Create.cshtml",
+      "TargetPath": "Views\\Animal\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\HocTap\\MaNguonMoCNTKT\\NetCore\\DemoDotNetMVC\\Views\\Cat\\Create.cshtml",
+      "TargetPath": "Views\\Cat\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15704,8 +15764,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\HocTap\\MaNguonMoCNTKT\\NetCore\\DemoDotNetMVC\\Views\\Animal\\Delete.cshtml",
+      "TargetPath": "Views\\Animal\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\HocTap\\MaNguonMoCNTKT\\NetCore\\DemoDotNetMVC\\Views\\Shared\\Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\HocTap\\MaNguonMoCNTKT\\NetCore\\DemoDotNetMVC\\Views\\Khoa\\Details.cshtml",
+      "TargetPath": "Views\\Khoa\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15714,8 +15784,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\HocTap\\MaNguonMoCNTKT\\NetCore\\DemoDotNetMVC\\Views\\Animal\\Index.cshtml",
+      "TargetPath": "Views\\Animal\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\HocTap\\MaNguonMoCNTKT\\NetCore\\DemoDotNetMVC\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\HocTap\\MaNguonMoCNTKT\\NetCore\\DemoDotNetMVC\\Views\\ChuyenNganh\\Delete.cshtml",
+      "TargetPath": "Views\\ChuyenNganh\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15734,8 +15814,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\HocTap\\MaNguonMoCNTKT\\NetCore\\DemoDotNetMVC\\Views\\Cat\\Details.cshtml",
+      "TargetPath": "Views\\Cat\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\HocTap\\MaNguonMoCNTKT\\NetCore\\DemoDotNetMVC\\Views\\Category\\Delete.cshtml",
       "TargetPath": "Views\\Category\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\HocTap\\MaNguonMoCNTKT\\NetCore\\DemoDotNetMVC\\Views\\ChuyenNganh\\Edit.cshtml",
+      "TargetPath": "Views\\ChuyenNganh\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15779,6 +15869,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\HocTap\\MaNguonMoCNTKT\\NetCore\\DemoDotNetMVC\\Views\\Cat\\Edit.cshtml",
+      "TargetPath": "Views\\Cat\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\HocTap\\MaNguonMoCNTKT\\NetCore\\DemoDotNetMVC\\Views\\Student\\Create.cshtml",
       "TargetPath": "Views\\Student\\Create.cshtml",
       "FileKind": "mvc"
@@ -15796,6 +15891,11 @@
     {
       "FilePath": "d:\\HocTap\\MaNguonMoCNTKT\\NetCore\\DemoDotNetMVC\\Views\\HelloWorld\\Welcome.cshtml",
       "TargetPath": "Views\\HelloWorld\\Welcome.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\HocTap\\MaNguonMoCNTKT\\NetCore\\DemoDotNetMVC\\Views\\Khoa\\Delete.cshtml",
+      "TargetPath": "Views\\Khoa\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {

@@ -1,0 +1,44 @@
+@model DemoDotNetMVC.Models.Cat
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Cat</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CatlId" class="control-label"></label>
+                <input asp-for="CatlId" class="form-control" />
+                <span asp-validation-for="CatlId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Giong" class="control-label"></label>
+                <input asp-for="Giong" class="form-control" />
+                <span asp-validation-for="Giong" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="AnimalId" />
+            <div class="form-group">
+                <label asp-for="AnimalName" class="control-label"></label>
+                <input asp-for="AnimalName" class="form-control" />
+                <span asp-validation-for="AnimalName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

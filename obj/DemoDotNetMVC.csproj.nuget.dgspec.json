@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\HocTap\\MaNguonMoCNTKT\\NetCore\\DemoDotnetMVC\\DemoDotNetMVC.csproj": {}
+    "D:\\HocTap\\MaNguonMoCNTKT\\NetCore\\DemoDotNetMVC\\DemoDotNetMVC.csproj": {}
   },
   "projects": {
-    "D:\\HocTap\\MaNguonMoCNTKT\\NetCore\\DemoDotnetMVC\\DemoDotNetMVC.csproj": {
+    "D:\\HocTap\\MaNguonMoCNTKT\\NetCore\\DemoDotNetMVC\\DemoDotNetMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\HocTap\\MaNguonMoCNTKT\\NetCore\\DemoDotnetMVC\\DemoDotNetMVC.csproj",
+        "projectUniqueName": "D:\\HocTap\\MaNguonMoCNTKT\\NetCore\\DemoDotNetMVC\\DemoDotNetMVC.csproj",
         "projectName": "DemoDotNetMVC",
-        "projectPath": "D:\\HocTap\\MaNguonMoCNTKT\\NetCore\\DemoDotnetMVC\\DemoDotNetMVC.csproj",
+        "projectPath": "D:\\HocTap\\MaNguonMoCNTKT\\NetCore\\DemoDotNetMVC\\DemoDotNetMVC.csproj",
         "packagesPath": "C:\\Users\\lyngu\\.nuget\\packages\\",
-        "outputPath": "D:\\HocTap\\MaNguonMoCNTKT\\NetCore\\DemoDotnetMVC\\obj\\",
+        "outputPath": "D:\\HocTap\\MaNguonMoCNTKT\\NetCore\\DemoDotNetMVC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

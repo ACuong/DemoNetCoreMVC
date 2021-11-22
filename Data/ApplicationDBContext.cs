@@ -24,6 +24,11 @@ using DemoDotNetMVC.Models;
         public DbSet<DemoDotNetMVC.Models.Teacher> Teacher { get; set; }
 
         public DbSet<DemoDotNetMVC.Models.Category> Category { get; set; }
-
+        
+        public DbSet<DemoDotNetMVC.Models.Khoa> Khoa { get; set; } 
+        public DbSet<DemoDotNetMVC.Models.ChuyenNganh> ChuyenNganh { get; set; }
+        
+        public DbSet<DemoDotNetMVC.Models.Animal> Animal { get; set; }
+        public DbSet<DemoDotNetMVC.Models.Cat> Cat { get; set; }
 
     }

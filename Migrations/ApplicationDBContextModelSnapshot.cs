@@ -14,6 +14,26 @@ namespace DemoDotNetMVC.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "5.0.12");
 
+            modelBuilder.Entity("DemoDotNetMVC.Models.Animal", b =>
+                {
+                    b.Property<int>("AnimalId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("AnimalName")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("AnimalId");
+
+                    b.ToTable("Animal");
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("Animal");
+                });
+
             modelBuilder.Entity("DemoDotNetMVC.Models.Category", b =>
                 {
                     b.Property<int>("CategoryID")
@@ -26,6 +46,25 @@ namespace DemoDotNetMVC.Migrations
                     b.HasKey("CategoryID");
 
                     b.ToTable("Category");
+                });
+
+            modelBuilder.Entity("DemoDotNetMVC.Models.ChuyenNganh", b =>
+                {
+                    b.Property<int>("ChuyenNganhId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("ChuyenNganhName")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("KhoaId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("ChuyenNganhId");
+
+                    b.HasIndex("KhoaId");
+
+                    b.ToTable("ChuyenNganh");
                 });
 
             modelBuilder.Entity("DemoDotNetMVC.Models.Employee", b =>
@@ -43,6 +82,20 @@ namespace DemoDotNetMVC.Migrations
                     b.HasKey("EmployeeID");
 
                     b.ToTable("Employee");
+                });
+
+            modelBuilder.Entity("DemoDotNetMVC.Models.Khoa", b =>
+                {
+                    b.Property<int>("KhoaId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("KhoaName")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("KhoaId");
+
+                    b.ToTable("Khoa");
                 });
 
             modelBuilder.Entity("DemoDotNetMVC.Models.Person", b =>
@@ -107,6 +160,19 @@ namespace DemoDotNetMVC.Migrations
                     b.ToTable("Student");
                 });
 
+            modelBuilder.Entity("DemoDotNetMVC.Models.Cat", b =>
+                {
+                    b.HasBaseType("DemoDotNetMVC.Models.Animal");
+
+                    b.Property<int>("CatlId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Giong")
+                        .HasColumnType("TEXT");
+
+                    b.HasDiscriminator().HasValue("Cat");
+                });
+
             modelBuilder.Entity("DemoDotNetMVC.Models.Teacher", b =>
                 {
                     b.HasBaseType("DemoDotNetMVC.Models.Person");
@@ -118,6 +184,17 @@ namespace DemoDotNetMVC.Migrations
                         .HasColumnType("INTEGER");
 
                     b.HasDiscriminator().HasValue("Teacher");
+                });
+
+            modelBuilder.Entity("DemoDotNetMVC.Models.ChuyenNganh", b =>
+                {
+                    b.HasOne("DemoDotNetMVC.Models.Khoa", "Khoa")
+                        .WithMany("ChuyenNganhs")
+                        .HasForeignKey("KhoaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Khoa");
                 });
 
             modelBuilder.Entity("DemoDotNetMVC.Models.Product", b =>
@@ -134,6 +211,11 @@ namespace DemoDotNetMVC.Migrations
             modelBuilder.Entity("DemoDotNetMVC.Models.Category", b =>
                 {
                     b.Navigation("Products");
+                });
+
+            modelBuilder.Entity("DemoDotNetMVC.Models.Khoa", b =>
+                {
+                    b.Navigation("ChuyenNganhs");
                 });
 #pragma warning restore 612, 618
         }
