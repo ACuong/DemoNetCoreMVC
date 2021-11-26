@@ -5,12 +5,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace DemoDotNetMVC.Models
 {
  
-    public class Animal
+    public class Movies
     {
         [Key]
-        public int AnimalId { get; set; }
+        public string MoviesID { get; set; }
 
-        [Display(Name ="Tên Loài vật")]
-        public string AnimalName { get; set; }
+        [Display(Name ="Tên")]
+        public string MoviesName { get; set; }
     }
 }

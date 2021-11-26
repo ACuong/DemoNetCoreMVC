@@ -9,96 +9,99 @@ using DemoDotNetMVC.Models;
 
 namespace DemoDotNetMVC.Controllers
 {
-    public class ChuyenNganhController : Controller
+    public class MoviesController : Controller
     {
         private readonly ApplicationDBContext _context;
 
-        public ChuyenNganhController(ApplicationDBContext context)
+        public MoviesController(ApplicationDBContext context)
         {
             _context = context;
         }
 
-        // GET: ChuyenNganh
+        // GET: Movies
         public async Task<IActionResult> Index(string searchString)
         {
-            var model = from m in _context.ChuyenNganh
+            var movies = from m in _context.Movies
                         select m;
 
             if (!String.IsNullOrEmpty(searchString))
             {
-                model = model.Where(s => s.ChuyenNganhName.Contains(searchString));
+                movies = movies.Where(s => s.MoviesName.Contains(searchString));
             }
-            return View(await _context.ChuyenNganh.ToListAsync());
+
+            return View(await movies.ToListAsync());
         }
 
-        // GET: ChuyenNganh/Details/5
-        public async Task<IActionResult> Details(int? id)
+        // GET: Movies/Details/5
+        public async Task<IActionResult> Details(string id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var chuyenNganh = await _context.ChuyenNganh
-                .Include(c => c.Khoa)
-                .FirstOrDefaultAsync(m => m.ChuyenNganhId == id);
-            if (chuyenNganh == null)
+            var movies = await _context.Movies
+                .FirstOrDefaultAsync(m => m.MoviesID == id);
+            if (movies == null)
             {
                 return NotFound();
             }
 
-            return View(chuyenNganh);
+            return View(movies);
         }
 
-        // GET: ChuyenNganh/Create
+        // GET: Movies/Create
         public IActionResult Create()
         {
-            ViewData["KhoaId"] = new SelectList(_context.Khoa, "KhoaId", "KhoaName");
             return View();
         }
 
-        // POST: ChuyenNganh/Create
+        // POST: Movies/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ChuyenNganhId,ChuyenNganhName,KhoaId")] ChuyenNganh chuyenNganh)
+        public async Task<IActionResult> Create([Bind("MoviesID,MoviesName")] Movies movies)
         {
+            try{
             if (ModelState.IsValid)
             {
-                _context.Add(chuyenNganh);
+                _context.Add(movies);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["KhoaId"] = new SelectList(_context.Khoa, "KhoaId", "KhoaName", chuyenNganh.KhoaId);
-            return View(chuyenNganh);
+            }
+            catch{
+                    ModelState.AddModelError("", "Khóa chính bị trùng");
+            }
+        
+            return View(movies);
         }
 
-        // GET: ChuyenNganh/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        // GET: Movies/Edit/5
+        public async Task<IActionResult> Edit(string id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var chuyenNganh = await _context.ChuyenNganh.FindAsync(id);
-            if (chuyenNganh == null)
+            var movies = await _context.Movies.FindAsync(id);
+            if (movies == null)
             {
                 return NotFound();
             }
-            ViewData["KhoaId"] = new SelectList(_context.Khoa, "KhoaId", "KhoaName", chuyenNganh.KhoaId);
-            return View(chuyenNganh);
+            return View(movies);
         }
 
-        // POST: ChuyenNganh/Edit/5
+        // POST: Movies/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ChuyenNganhId,ChuyenNganhName,KhoaId")] ChuyenNganh chuyenNganh)
+        public async Task<IActionResult> Edit(string id, [Bind("MoviesID,MoviesName")] Movies movies)
         {
-            if (id != chuyenNganh.ChuyenNganhId)
+            if (id != movies.MoviesID)
             {
                 return NotFound();
             }
@@ -107,12 +110,12 @@ namespace DemoDotNetMVC.Controllers
             {
                 try
                 {
-                    _context.Update(chuyenNganh);
+                    _context.Update(movies);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ChuyenNganhExists(chuyenNganh.ChuyenNganhId))
+                    if (!MoviesExists(movies.MoviesID))
                     {
                         return NotFound();
                     }
@@ -123,43 +126,41 @@ namespace DemoDotNetMVC.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["KhoaId"] = new SelectList(_context.Khoa, "KhoaId", "KhoaName", chuyenNganh.KhoaId);
-            return View(chuyenNganh);
+            return View(movies);
         }
 
-        // GET: ChuyenNganh/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        // GET: Movies/Delete/5
+        public async Task<IActionResult> Delete(string id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var chuyenNganh = await _context.ChuyenNganh
-                .Include(c => c.Khoa)
-                .FirstOrDefaultAsync(m => m.ChuyenNganhId == id);
-            if (chuyenNganh == null)
+            var movies = await _context.Movies
+                .FirstOrDefaultAsync(m => m.MoviesID == id);
+            if (movies == null)
             {
                 return NotFound();
             }
 
-            return View(chuyenNganh);
+            return View(movies);
         }
 
-        // POST: ChuyenNganh/Delete/5
+        // POST: Movies/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(string id)
         {
-            var chuyenNganh = await _context.ChuyenNganh.FindAsync(id);
-            _context.ChuyenNganh.Remove(chuyenNganh);
+            var movies = await _context.Movies.FindAsync(id);
+            _context.Movies.Remove(movies);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool ChuyenNganhExists(int id)
+        private bool MoviesExists(string id)
         {
-            return _context.ChuyenNganh.Any(e => e.ChuyenNganhId == id);
+            return _context.Movies.Any(e => e.MoviesID == id);
         }
     }
 }

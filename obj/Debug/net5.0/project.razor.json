@@ -15699,6 +15699,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\HocTap\\MaNguonMoCNTKT\\NetCore\\DemoDotNetMVC\\Views\\Movies\\Delete.cshtml",
+      "TargetPath": "Views\\Movies\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\HocTap\\MaNguonMoCNTKT\\NetCore\\DemoDotNetMVC\\Views\\Employee\\Edit.cshtml",
       "TargetPath": "Views\\Employee\\Edit.cshtml",
       "FileKind": "mvc"
@@ -15706,6 +15711,11 @@
     {
       "FilePath": "d:\\HocTap\\MaNguonMoCNTKT\\NetCore\\DemoDotNetMVC\\Views\\Animal\\Details.cshtml",
       "TargetPath": "Views\\Animal\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\HocTap\\MaNguonMoCNTKT\\NetCore\\DemoDotNetMVC\\Views\\Movies\\Edit.cshtml",
+      "TargetPath": "Views\\Movies\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15744,6 +15754,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\HocTap\\MaNguonMoCNTKT\\NetCore\\DemoDotNetMVC\\Views\\Movies\\Create.cshtml",
+      "TargetPath": "Views\\Movies\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\HocTap\\MaNguonMoCNTKT\\NetCore\\DemoDotNetMVC\\Views\\Teacher\\Details.cshtml",
       "TargetPath": "Views\\Teacher\\Details.cshtml",
       "FileKind": "mvc"
@@ -15751,6 +15766,11 @@
     {
       "FilePath": "d:\\HocTap\\MaNguonMoCNTKT\\NetCore\\DemoDotNetMVC\\Views\\Teacher\\Edit.cshtml",
       "TargetPath": "Views\\Teacher\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\HocTap\\MaNguonMoCNTKT\\NetCore\\DemoDotNetMVC\\Views\\Movies\\Index.cshtml",
+      "TargetPath": "Views\\Movies\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15831,6 +15851,11 @@
     {
       "FilePath": "d:\\HocTap\\MaNguonMoCNTKT\\NetCore\\DemoDotNetMVC\\Views\\Student\\Edit.cshtml",
       "TargetPath": "Views\\Student\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\HocTap\\MaNguonMoCNTKT\\NetCore\\DemoDotNetMVC\\Views\\Movies\\Details.cshtml",
+      "TargetPath": "Views\\Movies\\Details.cshtml",
       "FileKind": "mvc"
     },
     {

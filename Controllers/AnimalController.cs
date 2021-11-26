@@ -55,11 +55,17 @@ namespace DemoDotNetMVC.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("AnimalId,AnimalName")] Animal animal)
         {
-            if (ModelState.IsValid)
-            {
-                _context.Add(animal);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+            try{
+                    if (ModelState.IsValid)
+                {
+                    _context.Add(animal);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
+                }
+            }
+           
+            catch{
+                    ModelState.AddModelError("", "Khoa chinh bi trung");
             }
             return View(animal);
         }
