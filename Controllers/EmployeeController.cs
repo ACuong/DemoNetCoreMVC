@@ -19,9 +19,16 @@ namespace DemoDotNetMVC.Controllers
         }
 
         // GET: Employee
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-            return View(await _context.Employee.ToListAsync());
+            var movies = from m in _context.Employee select m;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                movies = movies.Where(s => s.EmployeeName.Contains(searchString));
+            }
+
+            return View(await movies.ToListAsync());
         }
 
         // GET: Employee/Details/5

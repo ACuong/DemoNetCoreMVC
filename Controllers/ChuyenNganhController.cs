@@ -21,14 +21,13 @@ namespace DemoDotNetMVC.Controllers
         // GET: ChuyenNganh
         public async Task<IActionResult> Index(string searchString)
         {
-            var model = from m in _context.ChuyenNganh
-                        select m;
+            var model = from m in _context.ChuyenNganh select m;
 
             if (!String.IsNullOrEmpty(searchString))
             {
                 model = model.Where(s => s.ChuyenNganhName.Contains(searchString));
             }
-            return View(await _context.ChuyenNganh.ToListAsync());
+            return View(await ChuyenNganh.ToListAsync());
         }
 
         // GET: ChuyenNganh/Details/5
