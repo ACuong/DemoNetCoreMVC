@@ -286,11 +286,6 @@ D:\HocTap\MaNguonMoCNTKT\NetCore\DemoDotNetMVC\obj\Debug\net5.0\Razor\Views\Khoa
 D:\HocTap\MaNguonMoCNTKT\NetCore\DemoDotNetMVC\obj\Debug\net5.0\Razor\Views\Khoa\Details.cshtml.g.cs
 D:\HocTap\MaNguonMoCNTKT\NetCore\DemoDotNetMVC\obj\Debug\net5.0\Razor\Views\Khoa\Edit.cshtml.g.cs
 D:\HocTap\MaNguonMoCNTKT\NetCore\DemoDotNetMVC\obj\Debug\net5.0\Razor\Views\Khoa\Index.cshtml.g.cs
-D:\HocTap\MaNguonMoCNTKT\NetCore\DemoDotNetMVC\obj\Debug\net5.0\Razor\Views\ChuyenNganh\Create.cshtml.g.cs
-D:\HocTap\MaNguonMoCNTKT\NetCore\DemoDotNetMVC\obj\Debug\net5.0\Razor\Views\ChuyenNganh\Delete.cshtml.g.cs
-D:\HocTap\MaNguonMoCNTKT\NetCore\DemoDotNetMVC\obj\Debug\net5.0\Razor\Views\ChuyenNganh\Details.cshtml.g.cs
-D:\HocTap\MaNguonMoCNTKT\NetCore\DemoDotNetMVC\obj\Debug\net5.0\Razor\Views\ChuyenNganh\Edit.cshtml.g.cs
-D:\HocTap\MaNguonMoCNTKT\NetCore\DemoDotNetMVC\obj\Debug\net5.0\Razor\Views\ChuyenNganh\Index.cshtml.g.cs
 D:\HocTap\MaNguonMoCNTKT\NetCore\DemoDotNetMVC\obj\Debug\net5.0\Razor\Views\Animal\Create.cshtml.g.cs
 D:\HocTap\MaNguonMoCNTKT\NetCore\DemoDotNetMVC\obj\Debug\net5.0\Razor\Views\Animal\Delete.cshtml.g.cs
 D:\HocTap\MaNguonMoCNTKT\NetCore\DemoDotNetMVC\obj\Debug\net5.0\Razor\Views\Animal\Details.cshtml.g.cs
@@ -306,3 +301,8 @@ D:\HocTap\MaNguonMoCNTKT\NetCore\DemoDotNetMVC\obj\Debug\net5.0\Razor\Views\Movi
 D:\HocTap\MaNguonMoCNTKT\NetCore\DemoDotNetMVC\obj\Debug\net5.0\Razor\Views\Movies\Details.cshtml.g.cs
 D:\HocTap\MaNguonMoCNTKT\NetCore\DemoDotNetMVC\obj\Debug\net5.0\Razor\Views\Movies\Edit.cshtml.g.cs
 D:\HocTap\MaNguonMoCNTKT\NetCore\DemoDotNetMVC\obj\Debug\net5.0\Razor\Views\Movies\Index.cshtml.g.cs
+D:\HocTap\MaNguonMoCNTKT\NetCore\DemoDotNetMVC\obj\Debug\net5.0\Razor\Views\ChuyenNganh\Create.cshtml.g.cs
+D:\HocTap\MaNguonMoCNTKT\NetCore\DemoDotNetMVC\obj\Debug\net5.0\Razor\Views\ChuyenNganh\Delete.cshtml.g.cs
+D:\HocTap\MaNguonMoCNTKT\NetCore\DemoDotNetMVC\obj\Debug\net5.0\Razor\Views\ChuyenNganh\Details.cshtml.g.cs
+D:\HocTap\MaNguonMoCNTKT\NetCore\DemoDotNetMVC\obj\Debug\net5.0\Razor\Views\ChuyenNganh\Edit.cshtml.g.cs
+D:\HocTap\MaNguonMoCNTKT\NetCore\DemoDotNetMVC\obj\Debug\net5.0\Razor\Views\ChuyenNganh\Index.cshtml.g.cs

@@ -12,8 +12,8 @@
 
 <form asp-controller="Employee" asp-action="Index">
     <p>
-        Title: <input type="text" name="SearchString" />
-        <input type="submit" value="Filter" />
+        Tên nhân viên: <input type="text" name="SearchString" />
+        <input type="submit" value="Tìm kiếm" />
     </p>
 </form>
 
@@ -47,3 +47,6 @@
 }
     </tbody>
 </table>
+<div>
+    <a asp-action="Index">Xóa bộ lọc</a>
+</div>

@@ -31,4 +31,5 @@ using DemoDotNetMVC.Models;
         public DbSet<DemoDotNetMVC.Models.Animal> Animal { get; set; }
         public DbSet<DemoDotNetMVC.Models.Cat> Cat { get; set; } 
         public DbSet<DemoDotNetMVC.Models.Movies> Movies { get; set; }
+
     }

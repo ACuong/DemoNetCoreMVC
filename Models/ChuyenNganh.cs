@@ -14,7 +14,7 @@ namespace DemoDotNetMVC.Models
 
         [Display(Name ="Tên Chuyen Nganh")]
         public string ChuyenNganhName { get; set; }
-
+        public string ChuyenSau { get; set; }
         public int KhoaId { get; set; }
         public Khoa Khoa {get; set;}
 

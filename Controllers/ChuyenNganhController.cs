@@ -19,15 +19,49 @@ namespace DemoDotNetMVC.Controllers
         }
 
         // GET: ChuyenNganh
-        public async Task<IActionResult> Index(string searchString)
+        public async Task<IActionResult> Index(string ChuyenSauIn, string searchString)
         {
-            var model = from m in _context.ChuyenNganh select m;
+            //
 
-            if (!String.IsNullOrEmpty(searchString))
+
+            //Use LINQ to get list of Khoa id.
+            IQueryable<string> genreQuery = from m in _context.ChuyenNganh
+                                            orderby m.ChuyenSau
+                                            select m.ChuyenSau;
+                                            
+
+
+            // tuong tu select * from Chuyen Nganh
+            var ChuyenNganhview = from m in _context.ChuyenNganh select m;
+
+
+            if (!string.IsNullOrEmpty(searchString))
             {
-                model = model.Where(s => s.ChuyenNganhName.Contains(searchString));
+                ChuyenNganhview = ChuyenNganhview.Where(s => s.ChuyenNganhName.Contains(searchString));
+                // select * from Chuyen Nganh where Chuyen Nganh Name like searchString
             }
-            return View(await ChuyenNganh.ToListAsync());
+
+            if (!string.IsNullOrEmpty(ChuyenSauIn))
+            {
+                ChuyenNganhview = ChuyenNganhview.Where(x => x.ChuyenSau == ChuyenSauIn);
+            }
+
+             var ChuyenNganhKhoaVM = new ChuyenNganhKhoaVModel
+            {
+                ChuyenSauList = new SelectList(await genreQuery.Distinct().ToListAsync()),
+                ChuyenNganhs = await ChuyenNganhview.ToListAsync()
+            };
+
+            return View(ChuyenNganhKhoaVM);
+
+            //  var model = from m in _context.ChuyenNganh select m;
+
+            // if (!String.IsNullOrEmpty(searchString))
+            // {
+            //     model = model.Where(s => s.ChuyenNganhName.Contains(searchString));
+            // }
+            // return View(await ChuyenNganh.ToListAsync());
+            
         }
 
         // GET: ChuyenNganh/Details/5
@@ -52,7 +86,7 @@ namespace DemoDotNetMVC.Controllers
         // GET: ChuyenNganh/Create
         public IActionResult Create()
         {
-            ViewData["KhoaId"] = new SelectList(_context.Khoa, "KhoaId", "KhoaName");
+            ViewData["KhoaId"] = new SelectList(_context.Khoa, "KhoaId", "KhoaId");
             return View();
         }
 
@@ -61,7 +95,7 @@ namespace DemoDotNetMVC.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ChuyenNganhId,ChuyenNganhName,KhoaId")] ChuyenNganh chuyenNganh)
+        public async Task<IActionResult> Create([Bind("ChuyenNganhId,ChuyenNganhName,ChuyenSau,KhoaId")] ChuyenNganh chuyenNganh)
         {
             if (ModelState.IsValid)
             {
@@ -69,7 +103,7 @@ namespace DemoDotNetMVC.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["KhoaId"] = new SelectList(_context.Khoa, "KhoaId", "KhoaName", chuyenNganh.KhoaId);
+            ViewData["KhoaId"] = new SelectList(_context.Khoa, "KhoaId", "KhoaId", chuyenNganh.KhoaId);
             return View(chuyenNganh);
         }
 
@@ -86,7 +120,7 @@ namespace DemoDotNetMVC.Controllers
             {
                 return NotFound();
             }
-            ViewData["KhoaId"] = new SelectList(_context.Khoa, "KhoaId", "KhoaName", chuyenNganh.KhoaId);
+            ViewData["KhoaId"] = new SelectList(_context.Khoa, "KhoaId", "KhoaId", chuyenNganh.KhoaId);
             return View(chuyenNganh);
         }
 
@@ -95,7 +129,7 @@ namespace DemoDotNetMVC.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ChuyenNganhId,ChuyenNganhName,KhoaId")] ChuyenNganh chuyenNganh)
+        public async Task<IActionResult> Edit(int id, [Bind("ChuyenNganhId,ChuyenNganhName,ChuyenSau,KhoaId")] ChuyenNganh chuyenNganh)
         {
             if (id != chuyenNganh.ChuyenNganhId)
             {
@@ -122,7 +156,7 @@ namespace DemoDotNetMVC.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["KhoaId"] = new SelectList(_context.Khoa, "KhoaId", "KhoaName", chuyenNganh.KhoaId);
+            ViewData["KhoaId"] = new SelectList(_context.Khoa, "KhoaId", "KhoaId", chuyenNganh.KhoaId);
             return View(chuyenNganh);
         }
 
