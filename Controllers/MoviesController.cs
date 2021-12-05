@@ -19,8 +19,8 @@ namespace DemoDotNetMVC.Controllers
         }
 
         // GET: Movies
-        // GET: Movies
-        public async Task<IActionResult> Index(string movieGenre, string searchString)
+       
+public async Task<IActionResult> Index(string movieGenre, string searchString)
         {// Use LINQ to get list of genres.
             IQueryable<string> genreQuery = from m in _context.Movies
                                             orderby m.Genre
@@ -47,6 +47,7 @@ namespace DemoDotNetMVC.Controllers
 
             return View(movieGenreVM);
         }
+
 
         // GET: Movies/Details/5
         public async Task<IActionResult> Details(string id)
@@ -77,20 +78,14 @@ namespace DemoDotNetMVC.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("MoviesID,MoviesName")] Movies movies)
+        public async Task<IActionResult> Create([Bind("MoviesID,MoviesName,Price,Genre,Rating")] Movies movies)
         {
-            try{
             if (ModelState.IsValid)
             {
                 _context.Add(movies);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            }
-            catch{
-                    ModelState.AddModelError("", "Khóa chính bị trùng");
-            }
-        
             return View(movies);
         }
 
@@ -115,7 +110,7 @@ namespace DemoDotNetMVC.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("MoviesID,MoviesName")] Movies movies)
+        public async Task<IActionResult> Edit(string id, [Bind("MoviesID,MoviesName,Price,Genre,Rating")] Movies movies)
         {
             if (id != movies.MoviesID)
             {

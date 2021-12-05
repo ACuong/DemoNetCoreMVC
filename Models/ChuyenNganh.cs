@@ -11,10 +11,16 @@ namespace DemoDotNetMVC.Models
         [Key]
         public int ChuyenNganhId { get; set; }
 
-
+        [StringLength(60, MinimumLength = 2)] 
+        [Required(ErrorMessage = "Thiếu tên chuyên ngành .")]
         [Display(Name ="Tên Chuyen Nganh")]
         public string ChuyenNganhName { get; set; }
+
+
+        [StringLength(60, MinimumLength = 2)] 
+        [Required(ErrorMessage = "Thiếu tên chuyên sâu .")]
         public string ChuyenSau { get; set; }
+
         public int KhoaId { get; set; }
         public Khoa Khoa {get; set;}
 
