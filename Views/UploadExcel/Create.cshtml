@@ -1,0 +1,25 @@
+@model DemoDotNetMVC.Models.Movies
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h2>Upload Excel</h2>
+
+@using (Html.BeginForm("index", "Uploadfile", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div>
+       @Html.TextBox( "file", "", new{ type = "file" }) <br/>
+        <input type="submit" value="Upload" />
+    </div>
+}
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

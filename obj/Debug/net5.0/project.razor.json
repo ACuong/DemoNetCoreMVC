@@ -15729,6 +15729,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\HocTap\\MaNguonMoCNTKT\\NetCore\\DemoDotNetMVC\\Views\\UploadExcel\\Create.cshtml",
+      "TargetPath": "Views\\UploadExcel\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\HocTap\\MaNguonMoCNTKT\\NetCore\\DemoDotNetMVC\\Views\\Animal\\Create.cshtml",
       "TargetPath": "Views\\Animal\\Create.cshtml",
       "FileKind": "mvc"
